@@ -12,7 +12,48 @@
 		6EB5361D2B74CB5A00C8B8CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5361C2B74CB5A00C8B8CA /* ViewController.swift */; };
 		6EB536222B74CB5D00C8B8CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EB536212B74CB5D00C8B8CA /* Assets.xcassets */; };
 		6EB536252B74CB5D00C8B8CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EB536232B74CB5D00C8B8CA /* LaunchScreen.storyboard */; };
+		6EB5363D2B74D0BC00C8B8CA /* KazDesignSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB5363C2B74D0BC00C8B8CA /* KazDesignSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6EB536402B74D0BC00C8B8CA /* KazDesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB5363A2B74D0BC00C8B8CA /* KazDesignSystem.framework */; };
+		6EB536412B74D0BC00C8B8CA /* KazDesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB5363A2B74D0BC00C8B8CA /* KazDesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6EB536482B74D0E800C8B8CA /* PrimaryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB536472B74D0E800C8B8CA /* PrimaryLabel.swift */; };
+		6EB5364A2B74D0F500C8B8CA /* SecondayLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB536492B74D0F500C8B8CA /* SecondayLabel.swift */; };
+		6EB5364C2B74D10700C8B8CA /* TertiaryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5364B2B74D10700C8B8CA /* TertiaryLabel.swift */; };
+		6EB5364E2B74D17700C8B8CA /* PlaceholderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5364D2B74D17700C8B8CA /* PlaceholderLabel.swift */; };
+		6EB536512B74D1DB00C8B8CA /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB536502B74D1DB00C8B8CA /* PrimaryButton.swift */; };
+		6EB536532B74E25000C8B8CA /* Configurator+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB536522B74E25000C8B8CA /* Configurator+.swift */; };
+		6EB536552B74E27100C8B8CA /* UIAlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB536542B74E27100C8B8CA /* UIAlertController+.swift */; };
+		6EB536572B74E29C00C8B8CA /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB536562B74E29C00C8B8CA /* Array+.swift */; };
+		6EB536592B74E2DA00C8B8CA /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB536582B74E2DA00C8B8CA /* UIImageView+.swift */; };
+		6EB5365C2B74E2F200C8B8CA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6EB5365B2B74E2F200C8B8CA /* SnapKit */; };
+		6EB5365F2B74E30300C8B8CA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6EB5365E2B74E30300C8B8CA /* Kingfisher */; };
+		6EB536612B74E32800C8B8CA /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB536602B74E32800C8B8CA /* UIViewController+.swift */; };
+		6EB536632B74E4C800C8B8CA /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB536622B74E4C800C8B8CA /* LogManager.swift */; };
+		6EB536652B74E4DB00C8B8CA /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB536642B74E4DB00C8B8CA /* AppError.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6EB5363E2B74D0BC00C8B8CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EB5360D2B74CB5A00C8B8CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EB536392B74D0BC00C8B8CA;
+			remoteInfo = KazDesignSystem;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6EB536452B74D0BC00C8B8CA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6EB536412B74D0BC00C8B8CA /* KazDesignSystem.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6EB536152B74CB5A00C8B8CA /* KazWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KazWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +63,34 @@
 		6EB536212B74CB5D00C8B8CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6EB536242B74CB5D00C8B8CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EB536262B74CB5D00C8B8CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EB5363A2B74D0BC00C8B8CA /* KazDesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KazDesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EB5363C2B74D0BC00C8B8CA /* KazDesignSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KazDesignSystem.h; sourceTree = "<group>"; };
+		6EB536472B74D0E800C8B8CA /* PrimaryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryLabel.swift; sourceTree = "<group>"; };
+		6EB536492B74D0F500C8B8CA /* SecondayLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondayLabel.swift; sourceTree = "<group>"; };
+		6EB5364B2B74D10700C8B8CA /* TertiaryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TertiaryLabel.swift; sourceTree = "<group>"; };
+		6EB5364D2B74D17700C8B8CA /* PlaceholderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderLabel.swift; sourceTree = "<group>"; };
+		6EB536502B74D1DB00C8B8CA /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		6EB536522B74E25000C8B8CA /* Configurator+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Configurator+.swift"; sourceTree = "<group>"; };
+		6EB536542B74E27100C8B8CA /* UIAlertController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+.swift"; sourceTree = "<group>"; };
+		6EB536562B74E29C00C8B8CA /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
+		6EB536582B74E2DA00C8B8CA /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		6EB536602B74E32800C8B8CA /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		6EB536622B74E4C800C8B8CA /* LogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
+		6EB536642B74E4DB00C8B8CA /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6EB536122B74CB5A00C8B8CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EB5365F2B74E30300C8B8CA /* Kingfisher in Frameworks */,
+				6EB536402B74D0BC00C8B8CA /* KazDesignSystem.framework in Frameworks */,
+				6EB5365C2B74E2F200C8B8CA /* SnapKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EB536372B74D0BC00C8B8CA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				6EB536172B74CB5A00C8B8CA /* KazWeather */,
+				6EB5363B2B74D0BC00C8B8CA /* KazDesignSystem */,
 				6EB536162B74CB5A00C8B8CA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				6EB536152B74CB5A00C8B8CA /* KazWeather.app */,
+				6EB5363A2B74D0BC00C8B8CA /* KazDesignSystem.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,6 +145,7 @@
 				6EB536182B74CB5A00C8B8CA /* AppDelegate.swift */,
 				6EB536232B74CB5D00C8B8CA /* LaunchScreen.storyboard */,
 				6EB5361A2B74CB5A00C8B8CA /* SceneDelegate.swift */,
+				6EB536642B74E4DB00C8B8CA /* AppError.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -108,11 +176,73 @@
 		6EB536312B74CDB300C8B8CA /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				6EB536332B74D08D00C8B8CA /* Manager */,
+				6EB536322B74D08900C8B8CA /* Extension */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		6EB536322B74D08900C8B8CA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6EB536562B74E29C00C8B8CA /* Array+.swift */,
+				6EB536522B74E25000C8B8CA /* Configurator+.swift */,
+				6EB536542B74E27100C8B8CA /* UIAlertController+.swift */,
+				6EB536582B74E2DA00C8B8CA /* UIImageView+.swift */,
+				6EB536602B74E32800C8B8CA /* UIViewController+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		6EB536332B74D08D00C8B8CA /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				6EB536622B74E4C800C8B8CA /* LogManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		6EB5363B2B74D0BC00C8B8CA /* KazDesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				6EB5363C2B74D0BC00C8B8CA /* KazDesignSystem.h */,
+				6EB536462B74D0C100C8B8CA /* UILabel */,
+				6EB5364F2B74D1D000C8B8CA /* UIButton */,
+			);
+			path = KazDesignSystem;
+			sourceTree = "<group>";
+		};
+		6EB536462B74D0C100C8B8CA /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				6EB536472B74D0E800C8B8CA /* PrimaryLabel.swift */,
+				6EB536492B74D0F500C8B8CA /* SecondayLabel.swift */,
+				6EB5364B2B74D10700C8B8CA /* TertiaryLabel.swift */,
+				6EB5364D2B74D17700C8B8CA /* PlaceholderLabel.swift */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		6EB5364F2B74D1D000C8B8CA /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				6EB536502B74D1DB00C8B8CA /* PrimaryButton.swift */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6EB536352B74D0BC00C8B8CA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EB5363D2B74D0BC00C8B8CA /* KazDesignSystem.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		6EB536142B74CB5A00C8B8CA /* KazWeather */ = {
@@ -122,15 +252,39 @@
 				6EB536112B74CB5A00C8B8CA /* Sources */,
 				6EB536122B74CB5A00C8B8CA /* Frameworks */,
 				6EB536132B74CB5A00C8B8CA /* Resources */,
+				6EB536452B74D0BC00C8B8CA /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6EB5363F2B74D0BC00C8B8CA /* PBXTargetDependency */,
+			);
+			name = KazWeather;
+			packageProductDependencies = (
+				6EB5365B2B74E2F200C8B8CA /* SnapKit */,
+				6EB5365E2B74E30300C8B8CA /* Kingfisher */,
+			);
+			productName = KazWeather;
+			productReference = 6EB536152B74CB5A00C8B8CA /* KazWeather.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6EB536392B74D0BC00C8B8CA /* KazDesignSystem */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EB536422B74D0BC00C8B8CA /* Build configuration list for PBXNativeTarget "KazDesignSystem" */;
+			buildPhases = (
+				6EB536352B74D0BC00C8B8CA /* Headers */,
+				6EB536362B74D0BC00C8B8CA /* Sources */,
+				6EB536372B74D0BC00C8B8CA /* Frameworks */,
+				6EB536382B74D0BC00C8B8CA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = KazWeather;
-			productName = KazWeather;
-			productReference = 6EB536152B74CB5A00C8B8CA /* KazWeather.app */;
-			productType = "com.apple.product-type.application";
+			name = KazDesignSystem;
+			productName = KazDesignSystem;
+			productReference = 6EB5363A2B74D0BC00C8B8CA /* KazDesignSystem.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -145,6 +299,10 @@
 					6EB536142B74CB5A00C8B8CA = {
 						CreatedOnToolsVersion = 15.2;
 					};
+					6EB536392B74D0BC00C8B8CA = {
+						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
+					};
 				};
 			};
 			buildConfigurationList = 6EB536102B74CB5A00C8B8CA /* Build configuration list for PBXProject "KazWeather" */;
@@ -156,11 +314,16 @@
 				Base,
 			);
 			mainGroup = 6EB5360C2B74CB5A00C8B8CA;
+			packageReferences = (
+				6EB5365A2B74E2F200C8B8CA /* XCRemoteSwiftPackageReference "SnapKit" */,
+				6EB5365D2B74E30300C8B8CA /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 6EB536162B74CB5A00C8B8CA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				6EB536142B74CB5A00C8B8CA /* KazWeather */,
+				6EB536392B74D0BC00C8B8CA /* KazDesignSystem */,
 			);
 		};
 /* End PBXProject section */
@@ -175,6 +338,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6EB536382B74D0BC00C8B8CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -182,13 +352,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EB536632B74E4C800C8B8CA /* LogManager.swift in Sources */,
+				6EB536532B74E25000C8B8CA /* Configurator+.swift in Sources */,
+				6EB536652B74E4DB00C8B8CA /* AppError.swift in Sources */,
 				6EB5361D2B74CB5A00C8B8CA /* ViewController.swift in Sources */,
+				6EB536612B74E32800C8B8CA /* UIViewController+.swift in Sources */,
+				6EB536592B74E2DA00C8B8CA /* UIImageView+.swift in Sources */,
 				6EB536192B74CB5A00C8B8CA /* AppDelegate.swift in Sources */,
+				6EB536572B74E29C00C8B8CA /* Array+.swift in Sources */,
 				6EB5361B2B74CB5A00C8B8CA /* SceneDelegate.swift in Sources */,
+				6EB536552B74E27100C8B8CA /* UIAlertController+.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EB536362B74D0BC00C8B8CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EB5364E2B74D17700C8B8CA /* PlaceholderLabel.swift in Sources */,
+				6EB5364A2B74D0F500C8B8CA /* SecondayLabel.swift in Sources */,
+				6EB536512B74D1DB00C8B8CA /* PrimaryButton.swift in Sources */,
+				6EB5364C2B74D10700C8B8CA /* TertiaryLabel.swift in Sources */,
+				6EB536482B74D0E800C8B8CA /* PrimaryLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6EB5363F2B74D0BC00C8B8CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6EB536392B74D0BC00C8B8CA /* KazDesignSystem */;
+			targetProxy = 6EB5363E2B74D0BC00C8B8CA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6EB536232B74CB5D00C8B8CA /* LaunchScreen.storyboard */ = {
@@ -324,6 +521,7 @@
 		6EB5362A2B74CB5D00C8B8CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -351,6 +549,7 @@
 		6EB5362B2B74CB5D00C8B8CA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -375,6 +574,75 @@
 			};
 			name = Release;
 		};
+		6EB536432B74D0BC00C8B8CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 75QZ7682T2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Kaz.KazDesignSystem;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6EB536442B74D0BC00C8B8CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 75QZ7682T2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Kaz.KazDesignSystem;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -396,7 +664,48 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		6EB536422B74D0BC00C8B8CA /* Build configuration list for PBXNativeTarget "KazDesignSystem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EB536432B74D0BC00C8B8CA /* Debug */,
+				6EB536442B74D0BC00C8B8CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6EB5365A2B74E2F200C8B8CA /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.0;
+			};
+		};
+		6EB5365D2B74E30300C8B8CA /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6EB5365B2B74E2F200C8B8CA /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6EB5365A2B74E2F200C8B8CA /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		6EB5365E2B74E30300C8B8CA /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6EB5365D2B74E30300C8B8CA /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6EB5360D2B74CB5A00C8B8CA /* Project object */;
 }
