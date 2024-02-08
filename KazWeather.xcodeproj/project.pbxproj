@@ -45,6 +45,7 @@
 		6EB536922B75465600C8B8CA /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB536912B75465600C8B8CA /* BaseTableViewCell.swift */; };
 		6EB536942B75473000C8B8CA /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB536932B75473000C8B8CA /* BaseCollectionViewCell.swift */; };
 		6EB536962B75473C00C8B8CA /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB536952B75473C00C8B8CA /* BaseView.swift */; };
+		6EB536992B7547CF00C8B8CA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB536982B7547CF00C8B8CA /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		6EB536912B75465600C8B8CA /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		6EB536932B75473000C8B8CA /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		6EB536952B75473C00C8B8CA /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		6EB536982B7547CF00C8B8CA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -326,6 +328,7 @@
 		6EB536882B753E2A00C8B8CA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6EB536972B7547AE00C8B8CA /* Coordinator */,
 				6EB5368E2B75404F00C8B8CA /* Base */,
 				6EB5368B2B753E8600C8B8CA /* Protocol */,
 			);
@@ -349,6 +352,14 @@
 				6EB536952B75473C00C8B8CA /* BaseView.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		6EB536972B7547AE00C8B8CA /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				6EB536982B7547CF00C8B8CA /* Coordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -494,6 +505,7 @@
 				6EB5367D2B75014800C8B8CA /* HTTPHeader.swift in Sources */,
 				6EB536552B74E27100C8B8CA /* UIAlertController+.swift in Sources */,
 				6EB536782B74FEBB00C8B8CA /* Router.swift in Sources */,
+				6EB536992B7547CF00C8B8CA /* Coordinator.swift in Sources */,
 				6EB5367F2B751FB300C8B8CA /* HTTPParameter.swift in Sources */,
 				6EB536812B75281E00C8B8CA /* HTTPError.swift in Sources */,
 			);
