@@ -31,6 +31,7 @@
 		6EB536652B74E4DB00C8B8CA /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB536642B74E4DB00C8B8CA /* AppError.swift */; };
 		6EB536672B74FA0200C8B8CA /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB536662B74FA0200C8B8CA /* SecondaryButton.swift */; };
 		6EB536692B74FBAD00C8B8CA /* TertiaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB536682B74FBAD00C8B8CA /* TertiaryButton.swift */; };
+		6EB5366B2B74FC9D00C8B8CA /* GCDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5366A2B74FC9D00C8B8CA /* GCDManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		6EB536642B74E4DB00C8B8CA /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		6EB536662B74FA0200C8B8CA /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		6EB536682B74FBAD00C8B8CA /* TertiaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TertiaryButton.swift; sourceTree = "<group>"; };
+		6EB5366A2B74FC9D00C8B8CA /* GCDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				6EB536622B74E4C800C8B8CA /* LogManager.swift */,
+				6EB5366A2B74FC9D00C8B8CA /* GCDManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				6EB536612B74E32800C8B8CA /* UIViewController+.swift in Sources */,
 				6EB536592B74E2DA00C8B8CA /* UIImageView+.swift in Sources */,
 				6EB536192B74CB5A00C8B8CA /* AppDelegate.swift in Sources */,
+				6EB5366B2B74FC9D00C8B8CA /* GCDManager.swift in Sources */,
 				6EB536572B74E29C00C8B8CA /* Array+.swift in Sources */,
 				6EB5361B2B74CB5A00C8B8CA /* SceneDelegate.swift in Sources */,
 				6EB536552B74E27100C8B8CA /* UIAlertController+.swift in Sources */,
