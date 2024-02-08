@@ -10,7 +10,7 @@ import UIKit
 class BaseViewController: UIViewController {
   
   // MARK: - Property
-  var finishableKeyboardEditing: Bool
+  final var finishableKeyboardEditing: Bool
   
   
   // MARK: - Initializer
@@ -35,7 +35,7 @@ class BaseViewController: UIViewController {
     
     super.viewDidLoad()
     
-    view.backgroundColor = .systemBackground
+    view.backgroundColor = .weatherBackground
     
     setHierarchy()
     setAttribute()
@@ -45,13 +45,13 @@ class BaseViewController: UIViewController {
   
   
   // MARK: - Method
-  private func makeViewFinishableEditing() {
+  final private func makeViewFinishableEditing() {
     let gesture = UITapGestureRecognizer(target: self, action: #selector(viewDidTap))
     gesture.cancelsTouchesInView = false
     view.addGestureRecognizer(gesture)
   }
   
-  @objc private func viewDidTap(_ sender: UIGestureRecognizer) {
+  @objc final private func viewDidTap(_ sender: UIGestureRecognizer) {
     if finishableKeyboardEditing { view.endEditing(true) }
   }
 }
