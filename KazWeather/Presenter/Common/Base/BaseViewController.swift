@@ -55,4 +55,3 @@ class BaseViewController: UIViewController {
     if finishableKeyboardEditing { view.endEditing(true) }
   }
 }
-
