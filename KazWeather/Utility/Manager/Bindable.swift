@@ -7,13 +7,16 @@
 
 final class Bindable<T> {
   
+  typealias Completion = (T) -> Void
+  typealias Action = (thread: Thread, completion: Completion)
+  
   enum Thread {
     case main
     case global
   }
   
   // MARK: - Property
-  var value: T {
+  private var value: T {
     didSet {
       guard let action else { return }
       
@@ -35,7 +38,11 @@ final class Bindable<T> {
     }
   }
   
-  var action: (thread: Thread, completion: (T) -> Void)?
+  var current: T {
+    return self.value
+  }
+  
+  var action: Action?
   
   
   // MARK: - Initializer
@@ -45,7 +52,11 @@ final class Bindable<T> {
   
   
   // MARK: - Method
-  func subscribe(thread: Thread, completion: @escaping (T) -> Void) {
+  func set(_ value: T) {
+    self.value = value
+  }
+  
+  func subscribe(thread: Thread, completion: @escaping Completion) {
     completion(value)
     self.action = (thread, completion)
   }
