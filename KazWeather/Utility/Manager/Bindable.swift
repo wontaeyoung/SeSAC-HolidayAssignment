@@ -31,7 +31,6 @@ final class Bindable<T> {
             
             action.completion(value)
           }
-        
       }
     }
   }
@@ -49,5 +48,42 @@ final class Bindable<T> {
   func subscribe(thread: Thread, completion: @escaping (T) -> Void) {
     completion(value)
     self.action = (thread, completion)
+  }
+}
+
+extension Bindable: ExpressibleByIntegerLiteral where T == Int {
+  convenience init(integerLiteral value: Int) {
+    self.init(value: value)
+  }
+}
+
+extension Bindable: ExpressibleByFloatLiteral where T == Double {
+  convenience init(floatLiteral value: Double) {
+    self.init(value: value)
+  }
+}
+
+extension Bindable: ExpressibleByBooleanLiteral where T == Bool {
+  convenience init(booleanLiteral value: Bool) {
+    self.init(value: value)
+  }
+}
+
+extension Bindable: ExpressibleByStringLiteral where T == String {
+  convenience init(stringLiteral value: String) {
+    self.init(value: value)
+  }
+}
+
+
+extension Bindable: ExpressibleByUnicodeScalarLiteral where T == String {
+  convenience init(unicodeScalarLiteral value: String) {
+    self.init(value: value)
+  }
+}
+
+extension Bindable: ExpressibleByExtendedGraphemeClusterLiteral where T == String {
+  convenience init(extendedGraphemeClusterLiteral value: String) {
+    self.init(value: value)
   }
 }
