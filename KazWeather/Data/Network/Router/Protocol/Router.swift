@@ -19,15 +19,11 @@ protocol Router {
 extension Router {
   
   func asURLRequest() throws -> URLRequest {
-    guard var components = URLComponents(string: baseURL) else {
-      throw HTTPError.invalidURL
-    }
+    guard var components = URLComponents(string: baseURL) else { throw HTTPError.invalidURL }
     components.path = path
     components.queryItems = parameters.current
     
-    guard let url = components.url else {
-      throw HTTPError.invalidURL
-    }
+    guard let url = components.url else { throw HTTPError.invalidURL }
     
     var request = URLRequest(url: url)
     request.httpMethod = method.rawValue
