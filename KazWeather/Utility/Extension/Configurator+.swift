@@ -43,3 +43,7 @@ extension Set: Configurator { }
 extension UIButton.Configuration: Configurator { }
 extension URLRequest: Configurator { }
 
+extension HTTPHeader: Configurator { }
+extension HTTPHeaders: Configurator { }
+extension HTTPParameter: Configurator { }
+extension HTTPParameters: Configurator { }
