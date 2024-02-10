@@ -53,9 +53,21 @@ struct CityWeather: Entity {
   let main: Main
   let rain: Rain
   let system: System
+  
+  static var dummy: CityWeather {
+    return CityWeather(
+      id: 0, name: "",
+      coord: Coord(lat: 0, lon: 0),
+      weather: Weather(id: 0, weather: .unknown, description: "", icon: ""),
+      wind: Wind(speed: 0, degree: 0, gust: 0),
+      main: Main(temp: 0, feelsLike: 0, tempMin: 0, tempMax: 0, pressure: 0, humidity: 0),
+      rain: Rain(h1: 0),
+      system: System(sunrise: 0, sunset: 0)
+    )
+  }
 }
 
-struct CoordDTO: DTO {
+struct CoordDTO: DTO, Encodable {
   
   let lat: Double
   let lon: Double
