@@ -37,7 +37,7 @@ final class HTTPClient {
       return .failure(.unexceptedResponse(status: response.statusCode))
     }
     
-    guard let result = try? JsonCoder.shared.decode(type: responseType, data: data) else {
+    guard let result = try? JsonCoder.shared.decode(to: responseType, from: data) else {
       return .failure(.dataDecodingFailed)
     }
     

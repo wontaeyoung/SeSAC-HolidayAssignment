@@ -51,7 +51,7 @@ struct City: Entity {
       return []
     }
     
-    guard let cityList = try? JsonCoder.shared.decode(type: [CityDTO].self, data: data) else {
+    guard let cityList = try? JsonCoder.shared.decode(to: [CityDTO].self, from: data) else {
       return []
     }
     
