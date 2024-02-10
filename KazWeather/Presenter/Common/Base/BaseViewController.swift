@@ -30,6 +30,7 @@ class BaseViewController: UIViewController {
   func setHierarchy() { }
   func setAttribute() { }
   func setConstraint() { }
+  func bind() { }
   
   override func viewDidLoad() {
     
@@ -40,6 +41,7 @@ class BaseViewController: UIViewController {
     setHierarchy()
     setAttribute()
     setConstraint()
+    bind()
     makeViewFinishableEditing()
   }
   
