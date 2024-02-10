@@ -8,13 +8,25 @@
 import UIKit
 import Lottie
 
-final class SplashViewController: BaseViewController {
+final class SplashViewController: BaseViewController, ViewModelController {
   
   // MARK: - UI
   private lazy var splashView = LottieAnimationView(name: "Splash").configured {
     $0.frame = view.bounds
     $0.contentMode = .scaleAspectFit
     $0.loopMode = .loop
+  }
+  
+  
+  // MARK: - Property
+  let viewModel: SplashViewModel
+  
+  
+  // MARK: - Initializer
+  init(viewModel: SplashViewModel) {
+    self.viewModel = viewModel
+    
+    super.init()
   }
   
   
@@ -25,6 +37,7 @@ final class SplashViewController: BaseViewController {
   
   override func setAttribute() {
     splashView.play()
+    viewModel.request()
   }
 }
 
