@@ -1,10 +1,10 @@
 import UIKit
 
-final class PrimaryButton: UIButton {
+final public class PrimaryButton: UIButton {
   
   private let action: () -> Void
   
-  init(
+  public init(
     title: String? = nil,
     image: UIImage? = nil,
     titlePadding: CGFloat? = nil,

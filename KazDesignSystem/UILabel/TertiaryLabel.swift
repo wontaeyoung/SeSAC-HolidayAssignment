@@ -7,9 +7,9 @@
 
 import UIKit
 
-final class TertiaryLabel: UILabel {
+final public class TertiaryLabel: UILabel {
   
-  init(text: String? = nil) {
+  public init(text: String? = nil) {
     super.init(frame: .zero)
     
     configureView(text: text)

@@ -1,8 +1,8 @@
 import UIKit
 
-final class PrimaryLabel: UILabel {
+final public class PrimaryLabel: UILabel {
   
-  init(text: String? = nil) {
+  public init(text: String? = nil) {
     super.init(frame: .zero)
     
     configureView(text: text)

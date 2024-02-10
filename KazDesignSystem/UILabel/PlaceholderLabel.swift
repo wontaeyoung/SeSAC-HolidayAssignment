@@ -7,23 +7,23 @@
 
 import UIKit
 
-final class PlaceholderLabel: UILabel {
+final public class PlaceholderLabel: UILabel {
   
   // MARK: - Property
-  var placeholder: String?
+  public var placeholder: String?
   private var isEmpty: Bool {
     return self.text?.isEmpty ?? true
   }
   
   private var tempText: String?
-  override var text: String? {
+  override public var text: String? {
     didSet {
       updateTextVisibility()
     }
   }
   
   // MARK: - Initializer
-  init(placeholder: String?, font: UIFont = .systemFont(ofSize: UIFont.labelFontSize)) {
+  public init(placeholder: String?, font: UIFont = .systemFont(ofSize: UIFont.labelFontSize)) {
     self.placeholder = placeholder
     super.init(frame: .zero)
     
@@ -43,7 +43,7 @@ final class PlaceholderLabel: UILabel {
     self.textAlignment = .left
   }
   
-  func updateTextVisibility() {
+  private func updateTextVisibility() {
     guard let placeholder else { return }
     guard self.text != placeholder else { return }
     guard self.text != self.tempText else { return }

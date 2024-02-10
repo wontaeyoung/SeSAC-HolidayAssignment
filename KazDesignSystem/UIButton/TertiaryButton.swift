@@ -1,10 +1,10 @@
 import UIKit
 
-final class TertiaryButton: UIButton {
+final public class TertiaryButton: UIButton {
   
   private let action: () -> Void
   
-  init(
+  public init(
     title: String? = nil,
     titlePadding: CGFloat? = nil,
     action: @escaping () -> Void
