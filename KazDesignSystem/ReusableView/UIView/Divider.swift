@@ -8,6 +8,6 @@ public final class Divider: BaseView {
   
   override public func setConstraint() {
     self.translatesAutoresizingMaskIntoConstraints = false
-    self.heightAnchor.constraint(equalToConstant: 1).isActive = true
+    self.heightAnchor.constraint(equalToConstant: 0.7).isActive = true
   }
 }
