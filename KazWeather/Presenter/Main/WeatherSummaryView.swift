@@ -57,10 +57,6 @@ final class WeatherSummaryView: BaseView {
     )
   }
   
-  override func setAttribute() {
-    self.backgroundColor = .clear
-  }
-  
   override func setConstraint() {
     cityNameLabel.snp.makeConstraints { make in
       make.top.equalToSuperview().offset(24)
@@ -96,12 +92,4 @@ final class WeatherSummaryView: BaseView {
     self.temperatureGapLabel.text = "최고 : \(data.main.tempMax)° | 최저 : \(data.main.tempMin)°"
     self.feelLikeTemperatureLabel.text = "체감온도 \(data.main.feelsLike)°"
   }
-}
-
-#Preview {
-  let controller = UINavigationController(
-    rootViewController: MainViewController(viewModel: .init(cityWeather: .dummy), cityWeather: .dummy)
-  )
-  controller.setNavigationBarHidden(true, animated: false)
-  return controller
 }
