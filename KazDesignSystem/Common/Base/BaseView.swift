@@ -13,7 +13,7 @@ open class BaseView: UIView {
   public override init(frame: CGRect) {
     super.init(frame: frame)
     
-    self.backgroundColor = .weatherBackground
+    self.backgroundColor = .clear
     
     setHierarchy()
     setAttribute()
