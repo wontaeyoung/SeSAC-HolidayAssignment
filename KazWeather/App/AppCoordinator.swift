@@ -19,6 +19,7 @@ final class AppCoordinator: Coordinator {
   }
   
   func start() {
+    navigationController.setNavigationBarHidden(true, animated: false)
     showSplashView()
   }
 }
@@ -33,7 +34,6 @@ extension AppCoordinator {
   func showSplashView() {
     let viewModel = SplashViewModel()
     let viewController = SplashViewController(viewModel: viewModel)
-    navigationController.navigationBar.isHidden = true
     
     self.push(viewController, animation: false)
   }
@@ -50,7 +50,7 @@ extension AppCoordinator {
     self.addChild(coordinator)
     coordinator.delegate = self
     
-    coordinator.showHomeView(with: data)
+    coordinator.showMainView(with: data)
   }
 }
 
