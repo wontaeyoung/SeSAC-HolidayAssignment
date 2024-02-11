@@ -6,7 +6,7 @@ public final class Divider: BaseView {
     self.backgroundColor = .borderColor
   }
   
-  override public func setHierarchy() {
+  override public func setConstraint() {
     self.translatesAutoresizingMaskIntoConstraints = false
     self.heightAnchor.constraint(equalToConstant: 1).isActive = true
   }
