@@ -5,7 +5,7 @@ public final class IconLabel: BaseView {
   private let imageView = UIImageView()
   private let label = UILabel()
   
-  init(symbol: String?, text: String?) {
+  public init(symbol: String?, text: String?) {
     self.imageView.image = UIImage(systemName: symbol ?? "")
     self.label.text = text
     
