@@ -40,10 +40,10 @@ final class WeatherSummaryView: BaseView {
   
   
   // MARK: - Initializer
-  init(data: CityWeather) {
+  init(cityWeather: CityWeather) {
     super.init(frame: .zero)
     
-    self.setData(with: data)
+    self.updateUI(with: cityWeather)
   }
   
   // MARK: - Life Cycle
@@ -89,7 +89,7 @@ final class WeatherSummaryView: BaseView {
   }
   
   // MARK: - Method
-  func setData(with data: CityWeather) {
+  func updateUI(with data: CityWeather) {
     self.cityNameLabel.text = data.name
     self.temperatureLabel.text = "\(data.main.temp)°"
     self.weatherDescriptionLabel.text = data.weather.description
