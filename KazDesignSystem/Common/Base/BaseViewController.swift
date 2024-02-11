@@ -7,32 +7,32 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+open class BaseViewController: UIViewController {
   
   // MARK: - Property
-  final var finishableKeyboardEditing: Bool
+  final public var finishableKeyboardEditing: Bool
   
   
   // MARK: - Initializer
-  init(finishableKeyboardEditing: Bool = false) {
+  public init(finishableKeyboardEditing: Bool = false) {
     self.finishableKeyboardEditing = finishableKeyboardEditing
     
     super.init(nibName: nil, bundle: nil)
   }
   
   @available(*, unavailable)
-  required init?(coder: NSCoder) {
+  public required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
   
   
   // MARK: - Life Cycle
-  func setHierarchy() { }
-  func setAttribute() { }
-  func setConstraint() { }
-  func bind() { }
+  open func setHierarchy() { }
+  open func setAttribute() { }
+  open func setConstraint() { }
+  open func bind() { }
   
-  override func viewDidLoad() {
+  open override func viewDidLoad() {
     
     super.viewDidLoad()
     

@@ -7,17 +7,17 @@
 
 import UIKit
 
-class BaseCollectionViewCell: UICollectionViewCell {
+open class BaseCollectionViewCell: UICollectionViewCell {
   
-  class var identifier: String {
+  public class var identifier: String {
     return self.description()
   }
   
-  func setHierarchy() { }
-  func setAttribute() { }
-  func setConstraint() { }
+  open func setHierarchy() { }
+  open func setAttribute() { }
+  open func setConstraint() { }
   
-  override init(frame: CGRect) {
+  public override init(frame: CGRect) {
     
     super.init(frame: frame)
     
@@ -30,7 +30,7 @@ class BaseCollectionViewCell: UICollectionViewCell {
   }
   
   @available(*, unavailable)
-  required init?(coder: NSCoder) {
+  public required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
 }

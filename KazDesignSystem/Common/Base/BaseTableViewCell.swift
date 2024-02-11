@@ -7,17 +7,17 @@
 
 import UIKit
 
-class BaseTableViewCell: UITableViewCell {
+open class BaseTableViewCell: UITableViewCell {
   
-  class var identifier: String {
+  public class var identifier: String {
     return self.description()
   }
   
-  func setHierarchy() { }
-  func setAttribute() { }
-  func setConstraint() { }
+  open func setHierarchy() { }
+  open func setAttribute() { }
+  open func setConstraint() { }
   
-  override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+  public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     
@@ -30,7 +30,7 @@ class BaseTableViewCell: UITableViewCell {
   }
   
   @available(*, unavailable)
-  required init?(coder: NSCoder) {
+  public required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
 }
