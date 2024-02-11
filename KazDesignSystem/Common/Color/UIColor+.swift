@@ -34,5 +34,4 @@ extension UIColor {
   public static let weatherBackground = UIColor(hex: "1B1C1C")
   public static let weatherForeground = UIColor(hex: "FEFFFF")
   public static let weatherBrand = UIColor(hex: "#FFD100")
-  
 }
