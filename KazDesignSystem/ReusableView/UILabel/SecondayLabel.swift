@@ -1,6 +1,6 @@
 import UIKit
 
-final public class SecondaryLabel: UILabel {
+public final class SecondaryLabel: UILabel {
   
   public init(text: String? = nil) {
     super.init(frame: .zero)

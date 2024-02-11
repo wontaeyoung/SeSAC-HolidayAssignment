@@ -1,6 +1,6 @@
 import UIKit
 
-final public class PrimaryButton: UIButton {
+public final class PrimaryButton: UIButton {
   
   private let action: () -> Void
   

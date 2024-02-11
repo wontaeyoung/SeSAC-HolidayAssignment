@@ -7,7 +7,7 @@
 
 import UIKit
 
-final public class PlaceholderLabel: UILabel {
+public final class PlaceholderLabel: UILabel {
   
   // MARK: - Property
   public var placeholder: String?

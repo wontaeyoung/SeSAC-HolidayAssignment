@@ -1,6 +1,6 @@
 import UIKit
 
-final public class TertiaryButton: UIButton {
+public final class TertiaryButton: UIButton {
   
   private let action: () -> Void
   

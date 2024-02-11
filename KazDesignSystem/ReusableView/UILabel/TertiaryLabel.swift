@@ -7,7 +7,7 @@
 
 import UIKit
 
-final public class TertiaryLabel: UILabel {
+public final class TertiaryLabel: UILabel {
   
   public init(text: String? = nil) {
     super.init(frame: .zero)
