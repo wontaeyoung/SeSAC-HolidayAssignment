@@ -5,7 +5,7 @@
 //  Created by 원태영 on 2/8/24.
 //
 
-protocol DTO: Decodable {
+protocol DTO: DefaultValueProvidable {
   associatedtype EntityType: Entity
   
   func toEntity() -> EntityType
