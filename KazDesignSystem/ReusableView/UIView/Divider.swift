@@ -1,5 +1,4 @@
 import UIKit
-import SnapKit
 
 public final class Divider: BaseView {
   
@@ -8,8 +7,7 @@ public final class Divider: BaseView {
   }
   
   override public func setHierarchy() {
-    self.snp.makeConstraints { make in
-      make.height.equalTo(1)
-    }
+    self.translatesAutoresizingMaskIntoConstraints = false
+    self.heightAnchor.constraint(equalToConstant: 1).isActive = true
   }
 }
