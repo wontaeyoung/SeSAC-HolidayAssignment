@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import KazDesignSystem
 import Lottie
 
 final class SplashViewController: BaseViewController, ViewModelController {

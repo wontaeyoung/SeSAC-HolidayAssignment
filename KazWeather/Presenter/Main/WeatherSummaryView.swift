@@ -6,8 +6,8 @@
 //
 
 import UIKit
-import SnapKit
 import KazDesignSystem
+import SnapKit
 
 final class WeatherSummaryView: BaseView {
   
