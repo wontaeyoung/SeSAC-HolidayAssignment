@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import KazDesignSystem
 
 @main
 final class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,7 +21,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     UINavigationBar.appearance().standardAppearance = appearence
     UINavigationBar.appearance().compactAppearance = appearence
     UINavigationBar.appearance().scrollEdgeAppearance = appearence
-    UIWindow.appearance().tintColor = .brand
+    UIWindow.appearance().tintColor = .weatherBrand
   }
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
