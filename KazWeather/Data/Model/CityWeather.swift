@@ -56,11 +56,11 @@ struct CityWeather: Entity {
   
   static var dummy: CityWeather {
     return CityWeather(
-      id: 0, name: "",
+      id: 0, name: "Jeju City",
       coord: Coord(lat: 0, lon: 0),
-      weather: Weather(id: 0, weather: .unknown, description: "", icon: ""),
-      wind: Wind(speed: 0, degree: 0, gust: 0),
-      main: Main(temp: 0, feelsLike: 0, tempMin: 0, tempMax: 0, pressure: 0, humidity: 0),
+      weather: Weather(id: 0, weather: .Clouds, description: "Broken Clouds", icon: ""),
+      wind: Wind(speed: 1, degree: 33, gust: 4),
+      main: Main(temp: 5, feelsLike: 2, tempMin: -4, tempMax: 7, pressure: 1020, humidity: 73),
       rain: Rain(h1: 0),
       system: System(sunrise: 0, sunset: 0)
     )
