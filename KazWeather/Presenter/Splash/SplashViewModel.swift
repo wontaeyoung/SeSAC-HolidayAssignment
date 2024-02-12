@@ -30,7 +30,7 @@ final class SplashViewModel: ViewModel {
       router: WeatherRouter.currentCity(id: requestID)
     )
     async let forecastBy3HResult = HTTPClient.shared.callRequest(
-      responseType: CityWeatherForecastBy3HResponseDTO.self,
+      responseType: ForecastBy3HResponseDTO.self,
       router: WeatherRouter.forecast3hCity(id: requestID)
     )
     

@@ -7,19 +7,19 @@
 
 import Foundation
 
-struct CityWeatherForecastBy3HResponseDTO: DTO {
+struct ForecastBy3HResponseDTO: DTO {
   let list: [CityWeatherDTO]
   
-  func toEntity() -> CityWeatherForecastBy3HResponse {
-    return CityWeatherForecastBy3HResponse(list: list.map { $0.toEntity() })
+  func toEntity() -> ForecastBy3HResponse {
+    return ForecastBy3HResponse(list: list.map { $0.toEntity() })
   }
   
-  static var defaultValue: CityWeatherForecastBy3HResponseDTO {
-    return CityWeatherForecastBy3HResponseDTO(list: [])
+  static var defaultValue: ForecastBy3HResponseDTO {
+    return ForecastBy3HResponseDTO(list: [])
   }
 }
 
-struct CityWeatherForecastBy3HResponse: Entity {
+struct ForecastBy3HResponse: Entity {
   let list: [CityWeather]
 }
 
