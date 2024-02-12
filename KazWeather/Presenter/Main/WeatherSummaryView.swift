@@ -37,14 +37,7 @@ final class WeatherSummaryView: BaseView {
     $0.font = .systemFont(ofSize: 20, weight: .semibold)
     $0.textAlignment = .center
   }
-  
-  
-  // MARK: - Initializer
-  init(cityWeather: CityWeather) {
-    super.init(frame: .zero)
-    
-    self.updateUI(with: cityWeather)
-  }
+
   
   // MARK: - Life Cycle
   override func setHierarchy() {
