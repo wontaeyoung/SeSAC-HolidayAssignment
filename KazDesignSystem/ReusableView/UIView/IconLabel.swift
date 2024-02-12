@@ -18,7 +18,6 @@ public final class IconLabel: BaseView {
   }
   
   public override func setAttribute() {
-    self.backgroundColor = .clear
     imageView.contentMode = .scaleAspectFit
   }
   
