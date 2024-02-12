@@ -5,6 +5,8 @@
 //  Created by 원태영 on 2/9/24.
 //
 
+import Foundation
+
 struct CityWeatherDTO: DTO {
   
   static let toCelsiusBuffer: Double = 273.15
@@ -70,7 +72,7 @@ struct CityWeatherDTO: DTO {
       id: id,
       name: name,
       visibility: visibility,
-      unixDate: unixDate,
+      unixDate: TimeInterval(unixDate),
       coord: coord.toEntity(),
       weather: weather.toEntity(),
       wind: wind.toEntity(),
@@ -102,7 +104,7 @@ struct CityWeather: Entity {
   let id: Int
   let name: String
   let visibility: Int
-  let unixDate: Int
+  let unixDate: TimeInterval
   let coord: Coord
   let weather: Weather
   let wind: Wind
@@ -236,6 +238,10 @@ struct Weather: Entity {
   let weather: WeatherCase
   let description: String
   let icon: String
+  
+  var profileURL: URL? {
+    return URL(string: APIKey.OpenWeather.iconRequestPath + "/\(icon)" + APIKey.OpenWeather.iconSuffix)
+  }
   
   enum WeatherCase: String {
     case Thunderstorm
