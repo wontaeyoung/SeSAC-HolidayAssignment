@@ -61,12 +61,12 @@ struct CityWeatherDTO: DTO {
     self.name = try container.decodeWithDefaultValue(String.self, forKey: .name)
     self.visibility = try container.decodeWithDefaultValue(Int.self, forKey: .visibility)
     self.unixDate = try container.decodeWithDefaultValue(Int.self, forKey: .unixDate)
-    self.coord = try container.decode(CoordDTO.self, forKey: .coord)
-    self.weather = try container.decode(WeatherDTO.self, forKey: .weather)
-    self.wind = try container.decode(WindDTO.self, forKey: .wind)
-    self.main = try container.decode(MainDTO.self, forKey: .main)
-    self.rain = try container.decode(RainDTO.self, forKey: .rain)
-    self.system = try container.decode(SystemDTO.self, forKey: .system)
+    self.coord = try container.decodeWithDefaultValue(CoordDTO.self, forKey: .coord)
+    self.weather = try container.decodeIfPresent([WeatherDTO].self, forKey: .weather)?.first ?? .defaultValue
+    self.wind = try container.decodeWithDefaultValue(WindDTO.self, forKey: .wind)
+    self.main = try container.decodeWithDefaultValue(MainDTO.self, forKey: .main)
+    self.rain = try container.decodeWithDefaultValue(RainDTO.self, forKey: .rain)
+    self.system = try container.decodeWithDefaultValue(SystemDTO.self, forKey: .system)
   }
   
   init(id: Int, name: String, visibility: Int, unixDate: Int, coord: CoordDTO, weather: WeatherDTO, wind: WindDTO, main: MainDTO, rain: RainDTO, system: SystemDTO) {
