@@ -7,6 +7,22 @@
 
 import Foundation
 
+struct CityWeatherForecastBy3HResponseDTO: DTO {
+  let list: [CityWeatherDTO]
+  
+  func toEntity() -> CityWeatherForecastBy3HResponse {
+    return CityWeatherForecastBy3HResponse(list: list.map { $0.toEntity() })
+  }
+  
+  static var defaultValue: CityWeatherForecastBy3HResponseDTO {
+    return CityWeatherForecastBy3HResponseDTO(list: [])
+  }
+}
+
+struct CityWeatherForecastBy3HResponse: Entity {
+  let list: [CityWeather]
+}
+
 struct CityWeatherDTO: DTO {
   
   static let toCelsiusBuffer: Double = 273.15
