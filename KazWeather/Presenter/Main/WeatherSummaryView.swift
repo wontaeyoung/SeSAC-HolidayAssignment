@@ -87,9 +87,9 @@ final class WeatherSummaryView: BaseView {
   // MARK: - Method
   func updateUI(with data: CityWeather) {
     self.cityNameLabel.text = data.name
-    self.temperatureLabel.text = "\(data.main.temp)°"
+    self.temperatureLabel.text = data.main.temp.toTempString
     self.weatherDescriptionLabel.text = data.weather.description
-    self.temperatureGapLabel.text = "최고 : \(data.main.tempMax)° | 최저 : \(data.main.tempMin)°"
-    self.feelLikeTemperatureLabel.text = "체감온도 \(data.main.feelsLike)°"
+    self.temperatureGapLabel.text = "최고 : \(data.main.tempMax.toTempString) | 최저 : \(data.main.tempMin.toTempString)"
+    self.feelLikeTemperatureLabel.text = "체감온도 \(data.main.feelsLike.toTempString)"
   }
 }
