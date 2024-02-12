@@ -16,7 +16,7 @@ final class DateFormatManager {
   
   func unixTimestampToString(with interval: TimeInterval, format: Format) -> String {
     let date = Date(timeIntervalSince1970: interval)
-    formatter.dateFormat = Format.HHmm.format
+    formatter.dateFormat = format.format
     formatter.timeZone = .current
     
     return formatter.string(from: date)
@@ -27,6 +27,7 @@ extension DateFormatManager {
   
   enum Format: String {
     case HHmm = "HH:mm"
+    case HHhour = "HH시"
     
     var format: String {
       return self.rawValue
