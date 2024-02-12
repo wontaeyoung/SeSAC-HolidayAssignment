@@ -25,7 +25,10 @@ final class MainCoordinator: Coordinator {
 
 extension MainCoordinator {
   
-  func showMainView(with data: CityWeather) {
+  func showMainView(currentWeather: CityWeather, forecastBy3H: [CityWeather]) {
+    let viewModel = MainViewModel(coordinator: self, cityWeather: currentWeather, forecastBy3H: forecastBy3H)
+    let viewController = MainViewController(viewModel: viewModel)
     
+    self.push(viewController)
   }
 }
