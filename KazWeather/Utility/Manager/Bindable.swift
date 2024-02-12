@@ -42,7 +42,7 @@ final class Bindable<T> {
     return self.value
   }
   
-  var action: Action?
+  private var action: Action?
   
   
   // MARK: - Initializer
@@ -56,7 +56,7 @@ final class Bindable<T> {
     self.value = value
   }
   
-  func subscribe(thread: Thread, completion: @escaping Completion) {
+  func subscribe(thread: Thread = .main, completion: @escaping Completion) {
     completion(value)
     self.action = (thread, completion)
   }
