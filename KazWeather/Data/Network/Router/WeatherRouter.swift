@@ -41,7 +41,7 @@ enum WeatherRouter: Router {
   
   var parameters: HTTPParameters {
     var parameters = HTTPParameters()
-      .parameter(key: Parameter.appid.key, value: APIKey.openWeather)
+      .parameter(key: Parameter.appid.key, value: APIKey.OpenWeather.authorization)
       .parameter(key: Parameter.lang.key, value: "kr")
     
     switch self {
