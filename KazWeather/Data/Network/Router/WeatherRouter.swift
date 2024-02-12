@@ -25,7 +25,7 @@ enum WeatherRouter: Router {
   var path: String {
     switch self {
       case .currentCity, .currentCoord:
-        return "/current"
+        return "/weather"
         
       case .forecast3hCity, .forecast3hCoord:
         return "/forecast"
@@ -40,7 +40,7 @@ enum WeatherRouter: Router {
   }
   
   var parameters: HTTPParameters {
-    var parameters = HTTPParameters()
+    let parameters = HTTPParameters()
       .parameter(key: Parameter.appid.key, value: APIKey.OpenWeather.authorization)
       .parameter(key: Parameter.lang.key, value: "kr")
     
