@@ -25,8 +25,6 @@ struct CityWeatherForecastBy3HResponse: Entity {
 
 struct CityWeatherDTO: DTO {
   
-  static let toCelsiusBuffer: Double = 273.15
-  
   // MARK: - Property
   let id: Int              // 도시 ID
   let name: String         // 도시 이름
@@ -388,10 +386,10 @@ struct MainDTO: DTO {
   // MARK: - Method
   func toEntity() -> Main {
     Main(
-      temp: Int(temp),
-      feelsLike: Int(feelsLike),
-      tempMin: Int(tempMin),
-      tempMax: Int(tempMax),
+      temp: Int(temp.toCelsius),
+      feelsLike: Int(feelsLike.toCelsius),
+      tempMin: Int(tempMin.toCelsius),
+      tempMax: Int(tempMax.toCelsius),
       pressure: pressure,
       humidity: humidity
     )
