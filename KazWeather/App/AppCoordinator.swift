@@ -45,12 +45,12 @@ extension AppCoordinator {
   /// start를 호출 일관성을 유지하기 위해 데이터를 별도의 방법으로 Coordinator에 주입해야하는데
   /// Coordinator가 데이터를 가지게 될 뿐더러, Coordinator initializer도 별도의 데이터를 받을 수 없도록 protocol에 정의되어 있음
   /// 그래서 우회해서 데이터를 주입해야 하는데, 놓쳤을 때 컴파일 에러를 띄워주지도 않는 방식이라 위험성이 높음
-  func connectMainFlow(with data: CityWeather) {
+  func connectMainFlow(currentWeather: CityWeather, forecastBy3H: [CityWeather]) {
     let coordinator = MainCoordinator(self.navigationController)
     self.addChild(coordinator)
     coordinator.delegate = self
     
-    coordinator.showMainView(with: data)
+    coordinator.showMainView(currentWeather: currentWeather, forecastBy3H: forecastBy3H)
   }
 }
 
