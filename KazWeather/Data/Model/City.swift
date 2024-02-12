@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CityDTO: DTO, Encodable {
+struct CityDTO: DTO {
   
   let id: Int
   let name: String
@@ -30,6 +30,16 @@ struct CityDTO: DTO, Encodable {
       state: state,
       country: country,
       coord: coord.toEntity()
+    )
+  }
+  
+  static var defaultValue: CityDTO {
+    return CityDTO(
+      id: .defaultValue,
+      name: .defaultValue,
+      state: .defaultValue,
+      country: .defaultValue,
+      coord: CoordDTO(lat: .defaultValue, lon: .defaultValue)
     )
   }
 }
