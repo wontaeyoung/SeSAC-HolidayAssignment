@@ -38,7 +38,10 @@ final class SplashViewController: BaseViewController, ViewModelController {
   
   override func setAttribute() {
     splashView.play()
-    viewModel.request()
+    
+    Task {
+      await viewModel.request()
+    }
   }
 }
 
