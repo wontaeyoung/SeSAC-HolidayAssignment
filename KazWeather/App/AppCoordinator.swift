@@ -32,7 +32,7 @@ final class AppCoordinator: Coordinator {
 extension AppCoordinator {
   
   func showSplashView() {
-    let viewModel = SplashViewModel()
+    let viewModel = SplashViewModel(coordinator: self)
     let viewController = SplashViewController(viewModel: viewModel)
     
     self.push(viewController, animation: false)

@@ -11,6 +11,10 @@ final class SplashViewModel: ViewModel {
   
   weak var coordinator: AppCoordinator?
   
+  init(coordinator: AppCoordinator? = nil) {
+    self.coordinator = coordinator
+  }
+  
   /// 두 케이스를 병렬 요청하게 되면서, 구조가 변경됨
   /// do-catch 구문에서 Result에 대해 try .get() 메서드로 성공과 에러 케이스에 대해 처리하는 것도 가능함
   /// Result에서는 HTTPError을 반환하지만, catch에서는 다시 Error 타입으로 업캐스팅 되어서 Result 타입을 사용하는 장점이 사라지는 것 같음
