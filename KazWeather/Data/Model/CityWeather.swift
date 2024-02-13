@@ -253,7 +253,7 @@ struct Weather: Entity {
   let description: String
   let icon: String
   
-  var profileURL: URL? {
+  var iconURL: URL? {
     return URL(string: APIKey.OpenWeather.iconRequestPath + "/\(icon)" + APIKey.OpenWeather.iconSuffix)
   }
   
