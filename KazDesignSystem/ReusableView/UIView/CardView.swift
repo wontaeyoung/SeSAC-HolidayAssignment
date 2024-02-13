@@ -6,7 +6,7 @@ public final class CardView: BaseView {
   // MARK: - Life Cycle
   public override func setAttribute() {
     self.layer.cornerRadius = 15
-    self.backgroundColor = .weatherBackground.withAlphaComponent(0.4)
+    self.backgroundColor = .weatherBackground.withAlphaComponent(0.2)
   }
 }
 
