@@ -11,7 +11,7 @@ protocol DefaultValueProvidable: Decodable {
 
 extension String: DefaultValueProvidable {
   static var defaultValue: String {
-    return "-"
+    return ""
   }
 }
 
