@@ -28,6 +28,7 @@ extension DateFormatManager {
   enum Format: String {
     case HHmm = "HH:mm"
     case HHhour = "HH시"
+    case EEEE = "EEEE"
     
     var format: String {
       return self.rawValue
