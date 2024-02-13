@@ -21,7 +21,7 @@ public final class IconLabel: BaseView {
     imageView.contentMode = .scaleAspectFit
   }
   
-  override public func setConstraint() {
+  public override func setConstraint() {
     imageView.translatesAutoresizingMaskIntoConstraints = false
     label.translatesAutoresizingMaskIntoConstraints = false
     
