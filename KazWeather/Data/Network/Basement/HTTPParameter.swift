@@ -9,11 +9,13 @@ import Foundation
 
 struct HTTPParameter {
   
+  typealias Value = any CustomStringConvertible
+  
   let key: String
-  let value: String
+  let value: Value
   
   var queryItem: URLQueryItem {
-    return URLQueryItem(name: key, value: value)
+    return URLQueryItem(name: key, value: value.description)
   }
 }
 
@@ -39,7 +41,7 @@ struct HTTPParameters {
     self.parameters = parameterList
   }
   
-  init(_ parameterDictionary: [String: String]) {
+  init(_ parameterDictionary: [String: HTTPParameter.Value]) {
     self.parameters = parameterDictionary.map { HTTPParameter(key: $0.key, value: $0.value) }
   }
   
@@ -54,7 +56,7 @@ struct HTTPParameters {
     self.parameters[index] = parameter
   }
   
-  mutating func update(key: String, value: String) {
+  mutating func update(key: String, value: HTTPParameter.Value) {
     update(HTTPParameter(key: key, value: value))
   }
   
@@ -75,7 +77,7 @@ extension HTTPParameters {
     return self.parameterAdded(parameter)
   }
   
-  func parameter(key: String, value: String) -> Self {
+  func parameter(key: String, value: HTTPParameter.Value) -> Self {
     return self.parameterAdded(HTTPParameter(key: key, value: value))
   }
   

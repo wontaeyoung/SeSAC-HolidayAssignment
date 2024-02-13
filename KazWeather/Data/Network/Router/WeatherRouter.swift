@@ -47,32 +47,33 @@ enum WeatherRouter: Router {
     switch self {
       case let .currentCity(id):
         return parameters
-          .parameter(key: Parameter.id.key, value: id.description)
+          .parameter(key: Parameter.id.key, value: id)
         
       case let .currentCoord(lat, long):
         return parameters
-          .parameter(key: Parameter.lat.key, value: lat.description)
-          .parameter(key: Parameter.lon.key, value: long.description)
+          .parameter(key: Parameter.lat.key, value: lat)
+          .parameter(key: Parameter.lon.key, value: long)
         
       case let .forecast3hCity(id):
         return parameters
-          .parameter(key: Parameter.id.key, value: id.description)
+          .parameter(key: Parameter.id.key, value: id)
+          .parameter(key: Parameter.cnt.key, value: 12)
         
       case let .forecast3hCoord(lat, long):
         return parameters
-          .parameter(key: Parameter.lat.key, value: lat.description)
-          .parameter(key: Parameter.lon.key, value: long.description)
+          .parameter(key: Parameter.lat.key, value: lat)
+          .parameter(key: Parameter.lon.key, value: long)
         
       case let .forecastDailyCity(id):
         return parameters
-          .parameter(key: Parameter.id.key, value: id.description)
-          .parameter(key: Parameter.cnt.key, value: 5.description)
+          .parameter(key: Parameter.id.key, value: id)
+          .parameter(key: Parameter.cnt.key, value: 5)
         
       case let .forecastDailyCoord(lat, long):
         return parameters
-          .parameter(key: Parameter.lat.key, value: lat.description)
-          .parameter(key: Parameter.lon.key, value: long.description)
-          .parameter(key: Parameter.cnt.key, value: 5.description)
+          .parameter(key: Parameter.lat.key, value: lat)
+          .parameter(key: Parameter.lon.key, value: long)
+          .parameter(key: Parameter.cnt.key, value: 5)
     }
   }
 }
