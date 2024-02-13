@@ -12,14 +12,14 @@ final class DateFormatManager {
   static let shared = DateFormatManager()
   private init() { }
   
-  private let formatter = DateFormatter()
+  private let locale = Locale(identifier: "ko_KR")
+  private lazy var formatter = DateFormatter().configured { $0.locale = locale }
   
   func unixTimestampToString(with interval: TimeInterval, format: Format) -> String {
-    let date = Date(timeIntervalSince1970: interval)
     formatter.dateFormat = format.format
     formatter.timeZone = .current
     
-    return formatter.string(from: date)
+    return formatter.string(from: interval.date)
   }
 }
 
