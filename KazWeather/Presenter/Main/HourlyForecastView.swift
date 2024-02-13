@@ -1,5 +1,5 @@
 //
-//  ForecastBy3HView.swift
+//  HourlyForecastView.swift
 //  KazWeather
 //
 //  Created by 원태영 on 2/11/24.
@@ -9,7 +9,7 @@ import UIKit
 import KazDesignSystem
 import SnapKit
 
-final class ForecastBy3HView: BaseView {
+final class HourlyForecastView: BaseView {
   
   
   // MARK: - UI

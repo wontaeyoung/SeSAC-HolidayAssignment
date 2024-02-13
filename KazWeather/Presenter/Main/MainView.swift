@@ -23,14 +23,14 @@ final class MainView: BaseView {
   }
   
   private let summaryView = WeatherSummaryView()
-  private let forecastBy3HView = ForecastBy3HView()
+  private let hourlyForecastView = HourlyForecastView()
   
   
   // MARK: - Life Cycle
   override func setHierarchy() {
     self.addSubviews(backgroundImageView, scrollView)
     self.scrollView.addSubview(paddingView)
-    self.paddingView.addSubviews(summaryView, forecastBy3HView)
+    self.paddingView.addSubviews(summaryView, hourlyForecastView)
   }
   
   override func setAttribute() {
@@ -55,7 +55,7 @@ final class MainView: BaseView {
       make.top.horizontalEdges.equalToSuperview()
     }
     
-    forecastBy3HView.snp.makeConstraints { make in
+    hourlyForecastView.snp.makeConstraints { make in
       make.top.equalTo(summaryView.snp.bottom).offset(20)
       make.horizontalEdges.equalToSuperview()
       make.bottom.equalToSuperview()
@@ -68,7 +68,7 @@ final class MainView: BaseView {
   }
   
   func updateForecastWeatherUI(with data: [CityWeather]) {
-    self.forecastBy3HView.updateUI(with: data)
+    self.hourlyForecastView.updateUI(with: data)
   }
 }
 
