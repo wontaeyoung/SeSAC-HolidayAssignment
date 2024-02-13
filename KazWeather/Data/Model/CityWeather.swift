@@ -35,6 +35,7 @@ struct CityWeatherDTO: DTO {
   let wind: WindDTO        // 바람
   let main: MainDTO        // 온도, 기압, 습도 관련 정보
   let rain: RainDTO        // 강수
+  let cloud: CloudDTO      // 구름
   let system: SystemDTO    // 일출, 일몰
   
   // MARK: - CodingKey
@@ -48,6 +49,7 @@ struct CityWeatherDTO: DTO {
     case wind
     case main
     case rain
+    case cloud = "clouds"
     case system = "sys"
   }
   
@@ -64,10 +66,11 @@ struct CityWeatherDTO: DTO {
     self.wind = try container.decodeWithDefaultValue(WindDTO.self, forKey: .wind)
     self.main = try container.decodeWithDefaultValue(MainDTO.self, forKey: .main)
     self.rain = try container.decodeWithDefaultValue(RainDTO.self, forKey: .rain)
+    self.cloud = try container.decodeWithDefaultValue(CloudDTO.self, forKey: .cloud)
     self.system = try container.decodeWithDefaultValue(SystemDTO.self, forKey: .system)
   }
   
-  init(id: Int, name: String, visibility: Int, unixDate: Int, coord: CoordDTO, weather: WeatherDTO, wind: WindDTO, main: MainDTO, rain: RainDTO, system: SystemDTO) {
+  init(id: Int, name: String, visibility: Int, unixDate: Int, coord: CoordDTO, weather: WeatherDTO, wind: WindDTO, main: MainDTO, rain: RainDTO, cloud: CloudDTO ,system: SystemDTO) {
     self.id = id
     self.name = name
     self.visibility = visibility
@@ -77,6 +80,7 @@ struct CityWeatherDTO: DTO {
     self.wind = wind
     self.main = main
     self.rain = rain
+    self.cloud = cloud
     self.system = system
   }
   
@@ -92,6 +96,7 @@ struct CityWeatherDTO: DTO {
       wind: wind.toEntity(),
       main: main.toEntity(),
       rain: rain.toEntity(),
+      cloud: cloud.toEntity(),
       system: system.toEntity()
     )
   }
@@ -108,6 +113,7 @@ struct CityWeatherDTO: DTO {
       wind: .defaultValue,
       main: .defaultValue,
       rain: .defaultValue,
+      cloud: .defaultValue,
       system: .defaultValue
     )
   }
@@ -124,6 +130,7 @@ struct CityWeather: Entity {
   let wind: Wind
   let main: Main
   let rain: Rain
+  let cloud: Cloud
   let system: System
   
   static var dummy: CityWeather {
@@ -136,6 +143,7 @@ struct CityWeather: Entity {
       wind: Wind(speed: 1, degree: 33, gust: 4),
       main: Main(temp: 5, feelsLike: 2, tempMin: -4, tempMax: 7, pressure: 1020, humidity: 73),
       rain: Rain(h1: 1, h3: 3),
+      cloud: Cloud(all: 50),
       system: System(sunrise: 0, sunset: 0)
     )
   }
@@ -465,6 +473,41 @@ struct Rain: Entity {
   
   let h1: Int
   let h3: Int
+}
+
+struct CloudDTO: DTO {
+  
+  // MARK: - Property
+  let all: Int
+  
+  // MARK: - CodingKey
+  enum CodingKeys: CodingKey {
+    case all
+  }
+  
+  // MARK: - Initializer
+  init(from decoder: Decoder) throws {
+    let container = try decoder.container(keyedBy: CodingKeys.self)
+    
+    self.all = try container.decodeWithDefaultValue(Int.self, forKey: .all)
+  }
+  
+  init(all: Int) {
+    self.all = all
+  }
+  
+  // MARK: - Method
+  func toEntity() -> Cloud {
+    return Cloud(all: all)
+  }
+  
+  static var defaultValue: CloudDTO {
+    return CloudDTO(all: .defaultValue)
+  }
+}
+
+struct Cloud: Entity {
+  let all: Int
 }
 
 struct SystemDTO: DTO {
