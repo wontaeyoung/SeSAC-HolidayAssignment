@@ -11,6 +11,4 @@ protocol SearchBarControllable: UISearchBarDelegate { }
 
 protocol TableControllable: UITableViewDelegate, UITableViewDataSource { }
 
-protocol CollectionControllable: UICollectionViewDelegate, UICollectionViewDataSource {
-  func makeCollectionLayout() -> UICollectionViewFlowLayout
-}
+protocol CollectionControllable: UICollectionViewDelegate, UICollectionViewDataSource { }
