@@ -41,7 +41,7 @@ final class WeatherItemView: UIStackView {
   
   func updateUI(with data: CityWeather) {
     timeLabel.text = DateFormatManager.shared.unixTimestampToString(with: data.unixDate, format: .HHhour)
-    weatherIconImageView.setImage(from: data.weather.profileURL, with: CGSize(width: 30, height: 30))
+    weatherIconImageView.setImage(from: data.weather.iconURL, with: CGSize(width: 30, height: 30))
     temperatureLabel.text = data.main.temp.toTempString
   }
 }
