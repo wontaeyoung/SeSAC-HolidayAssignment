@@ -14,12 +14,17 @@ final class DateFormatManager {
   
   private let locale = Locale(identifier: "ko_KR")
   private lazy var formatter = DateFormatter().configured { $0.locale = locale }
+  private lazy var calendar = Calendar.current.configured { $0.locale = locale }
   
   func unixTimestampToString(with interval: TimeInterval, format: Format) -> String {
     formatter.dateFormat = format.format
     formatter.timeZone = .current
     
     return formatter.string(from: interval.date)
+  }
+  
+  func isDate(with interval: TimeInterval, by component: Calendar.Component, equalTo: Int) -> Bool {
+    return calendar.component(component, from: interval.date) == equalTo
   }
 }
 
