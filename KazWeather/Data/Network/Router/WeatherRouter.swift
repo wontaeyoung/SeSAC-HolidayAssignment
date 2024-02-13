@@ -57,7 +57,6 @@ enum WeatherRouter: Router {
       case let .forecast3hCity(id):
         return parameters
           .parameter(key: Parameter.id.key, value: id)
-          .parameter(key: Parameter.cnt.key, value: 12)
         
       case let .forecast3hCoord(lat, long):
         return parameters
