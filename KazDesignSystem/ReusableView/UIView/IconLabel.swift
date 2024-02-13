@@ -40,4 +40,9 @@ public final class IconLabel: BaseView {
       label.trailingAnchor.constraint(equalTo: self.trailingAnchor)
     ])
   }
+  
+  public func updateUI(symbol: String, text: String) {
+    self.imageView.image = UIImage(systemName: symbol)
+    self.label.text = text
+  }
 }
