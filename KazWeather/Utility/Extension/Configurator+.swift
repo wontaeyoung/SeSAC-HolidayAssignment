@@ -47,3 +47,5 @@ extension HTTPHeader: Configurator { }
 extension HTTPHeaders: Configurator { }
 extension HTTPParameter: Configurator { }
 extension HTTPParameters: Configurator { }
+
+extension Calendar: Configurator { }
