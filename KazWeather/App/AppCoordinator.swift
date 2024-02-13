@@ -46,6 +46,8 @@ extension AppCoordinator {
   /// Coordinator가 데이터를 가지게 될 뿐더러, Coordinator initializer도 별도의 데이터를 받을 수 없도록 protocol에 정의되어 있음
   /// 그래서 우회해서 데이터를 주입해야 하는데, 놓쳤을 때 컴파일 에러를 띄워주지도 않는 방식이라 위험성이 높음
   func connectMainFlow(currentWeather: CityWeather, forecastBy3H: [CityWeather]) {
+    navigationController.viewControllers.removeFirst()
+    
     let coordinator = MainCoordinator(self.navigationController)
     self.addChild(coordinator)
     coordinator.delegate = self

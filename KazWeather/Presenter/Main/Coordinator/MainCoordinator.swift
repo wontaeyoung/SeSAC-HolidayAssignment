@@ -29,6 +29,6 @@ extension MainCoordinator {
     let viewModel = MainViewModel(coordinator: self, cityWeather: currentWeather, forecastBy3H: forecastBy3H)
     let viewController = MainViewController(viewModel: viewModel)
     
-    self.push(viewController)
+    self.push(viewController, animation: false)
   }
 }
